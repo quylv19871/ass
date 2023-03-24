@@ -1,0 +1,22 @@
+<form action="/cates/save-edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{{cate._id}}">
+    <div>
+        <label for="">Tên danh mục</label>
+        <input type="text" name="name" value="{{cate.name}}">
+    </div>
+    <div>
+        <img src="{{cate.image}}" width="100">
+        <br>
+        <label for="">Ảnh danh mục</label>
+        <input type="file" name="image">
+    </div>
+    <div>
+        <label for="">Mô tả</label>
+        <textarea name="description" cols="30" rows="5">{{cate.description}}</textarea>
+    </div>
+    <div>
+        <button type="submit">Lưu</button>
+        <a href="/cates">Hủy</a>
+    </div>
+
+</form>
